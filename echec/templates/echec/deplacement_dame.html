@@ -1,0 +1,22 @@
+{% extends "echec/index.html" %}
+{% block title %} dame {%endblock%}
+
+{% block nav %}
+<div class="nav"><p><ul>
+			<li><a href=" {% url 'deplacement_pion' %} ">le pion</a></li>
+			<li><a href=" {% url 'deplacement_cavalier' %} ">le cavalier</a></li>
+			<li><a href=" {% url 'deplacement_fou' %} ">le fou</a></li>
+			<li><a href=" {% url 'deplacement_tour' %}">la tour</a></li>
+			<li><a href=" {% url 'deplacement_dame' %}">la dame</a></li>
+			<li><a href="déplacement roi.html">le roi</a></li>
+			<li><a href="petitroque.html"> le petit roque</a></li>
+			<li><a href="grandroque.html"> le grand roque</a></li>
+		</ul></p></div>
+
+{%endblock%}
+{% block content %}
+{% load static %}
+<p><img src="{% static 'img/dame.gif' %}" alt="dame" /></p>
+		<p>la dame se déplace en diagonal, en vertical et en horizontale ce qui fait d'elle la pièce la plus puissante du jeu </p>
+		<p><a href=" {% url 'accueil' %} ">retour</a></p>
+{%endblock%}

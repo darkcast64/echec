@@ -1,0 +1,21 @@
+{% extends "echec/index.html" %}
+{% block title %} deplacement cavalier {%endblock%}
+{%block nav %}
+
+<div class="nav"><p><ul>
+			<li><a href=" {% url 'deplacement_pion' %} ">le pion</a></li>
+			<li><a href=" {% url 'deplacement_cavalier' %} ">le cavalier</a></li>
+			<li><a href=" {% url 'deplacement_fou' %}">le fou</a></li>
+			<li><a href=" {% url 'deplacement_tour' %}">la tour</a></li>
+			<li><a href=" {% url 'deplacement_dame' %}">la dame</a></li>
+			<li><a href="déplacement roi.html">le roi</a></li>
+			<li><a href="petitroque.html"> le petit roque</a></li>
+			<li><a href="grandroque.html"> le grand roque</a></li>
+		</ul></p></div>
+{%endblock %}
+{% block content %}
+{% load static %}
+<div align="center"><img src="{% static 'img/cavalier.gif' %}" alt="déplacement du cavalier" /></div>
+	<p><div align="center"style="color : red ;font-weight: bold;">voici toutes les cases que peut occuper la cavalier à partir de sa case de départ</div></p></br>
+	<p><div align="center"style="color : red ;font-weight: bold;"><a href=" {% url 'accueil' %} ">retour</a></div>
+{% endblock %}

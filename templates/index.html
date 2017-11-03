@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			{% load static %}
+			
+			<title>{% block title %}Conseils pour bien jouer aux échecs blablabla{% endblock %}</title>
+		</head>
+
+		<body><p><header><h1>Les échecs</h1></header></p>
+		{% block content %}
+		<p>Bonjour à toutes et a tous,</p><p> ce site web à pour but de vous apprendre les règles du jeu d'échec</p><p> ainsi que quelques conseils pour bien débuter une partie</p>{%endblock %}
+		<nav>
+			{% block nav %}
+			<ul>
+
+			<li><a href=" {% url 'regles' %} ">règles de déplacement des pièces</a></li>
+			<li><a href="{% url '10commandements' %}">Les dix commandements<br>pour les ouvertures aux échecs</a></li>
+			<li><a href="{% url 'proprietes_strategiques' %}">Les propriétés stratégiques<br> des pièces</a></li>
+</div>
+		</ul>{% endblock %}</nav>
+		</body>
+	</html>

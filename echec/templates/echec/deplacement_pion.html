@@ -1,0 +1,32 @@
+{% extends "echec/index.html" %}
+{% block title %} deplacement pion {%endblock%}
+
+{%block nav %}
+
+<div class="nav"><p><ul>
+			<li><a href=" {% url 'deplacement_pion' %} ">le pion</a></li>
+			<li><a href=" {% url 'deplacement_cavalier' %} ">le cavalier</a></li>
+			<li><a href=" {% url 'deplacement_fou' %} ">le fou</a></li>
+			<li><a href=" {% url 'deplacement_tour' %}">la tour</a></li>
+			<li><a href=" {% url 'deplacement_dame' %}">la dame</a></li>
+			<li><a href="déplacement roi.html">le roi</a></li>
+			<li><a href="petitroque.html"> le petit roque</a></li>
+			<li><a href="grandroque.html"> le grand roque</a></li>
+		</ul></p></div>
+{%endblock %}
+{%block content %}
+{% load static %}
+<body>
+
+<div align="center"><img src="{% static 'img/pion.gif' %}" alt="déplacement du pion" />
+		
+		<p><div align="center"style="color : red ;font-weight: bold;">lors du premier coup du pion celui ci peut se déplacer de deux cases en vertical mais uniquement lors du premier coup, sinon son déplacement est d'une case en vertical</div></p></br>
+		<img src="{% static 'img/pion2.gif' %}" alt="attaque du pion" />
+</div>
+		<div class="pion">le pion mange son adversaire en diagonal avec une portée d'une case</div>
+<form action="/media/admin01/82E3-3F94/mat en 2/mat en 2 (1)" method="post">
+  <input name="send" value="executer" type="submit">
+</form>
+		<div align="center"><p><a href=" {% url 'accueil' %} ">retour</a></p></div>
+	</body>
+{%endblock %}
