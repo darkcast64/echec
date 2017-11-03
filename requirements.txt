@@ -1,0 +1,9 @@
+
+dj-database-url==0.4.2
+Django==1.10
+gunicorn==19.7.1
+Pillow==3.1.2
+pytz==2014.10
+sqlparse==0.1.18
+unity-lens-photos==1.0
+virtualenv==15.1.0
