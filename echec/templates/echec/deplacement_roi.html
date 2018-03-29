@@ -1,0 +1,11 @@
+{% extends "echec/regles.html" %}
+{% block title %} deplacement fou {%endblock%}
+
+
+{%block content %}
+{% load static %}
+	<body><p><img src="{% static 'img/roi.gif' %}" alt="déplacement_roi" alt="roi" /></p>
+	<p>le roi se déplace d'une case soit à l'horizontal soit à la vertical ou soit en diagonale</p>
+	<p><a href="regles.html">retour</a></p>
+	</body>
+{%endblock%}

@@ -1,0 +1,83 @@
+from django.shortcuts import render
+
+from django.views.generic import TemplateView
+from .forms import ConnexionForm
+
+# Create your models here.
+class IndexView(TemplateView):
+    template_name="echec/index.html"
+class ReglesView(TemplateView):
+    template_name="echec/regles.html"
+class CommandementsView(TemplateView):
+    template_name="echec/10commandements.html"
+class ProprietesView(TemplateView):
+    template_name="echec/proprietes-strategiques.html"
+class Deplacement_pionView(TemplateView):
+    template_name="echec/deplacement_pion.html"
+class Deplacement_cavalierView(TemplateView):
+    template_name="echec/deplacement_cavalier.html"
+class Deplacement_fouView(TemplateView):
+    template_name="echec/deplacement_fou.html"
+class Deplacement_tourView(TemplateView):
+    template_name="echec/deplacement_tour.html"
+class Deplacement_dameView(TemplateView):
+    template_name="echec/deplacement_dame.html"
+class Deplacement_roiView(TemplateView):
+    template_name="echec/deplacement_roi.html"
+class Petit_roqueView(TemplateView):
+	template_name="echec/petitroque.html"
+class Grand_roqueView(TemplateView):
+	template_name="echec/grandroque.html"
+class EchiquierView(TemplateView):
+	template_name="echec/exercices.html"
+class Fourchette_pionView(TemplateView):
+	template_name="echec/fourchettepion.html"
+class Fourchette_cavalierView(TemplateView):
+	template_name="echec/fourchette_cavalier.html"
+class Rayon_xView(TemplateView):
+	template_name="echec/rayon_x.html"
+class ClouageView(TemplateView):
+	template_name="echec/clouage.html"
+class Maten1View(TemplateView):
+	template_name="echec/maten1.html"
+class Maten2View(TemplateView):
+    template_name="echec/maten2.html"
+
+def connexion(request):
+
+    # Construire le formulaire, soit avec les données postées,
+
+    # soit vide si l'utilisateur accède pour la première fois
+
+    # à la page.
+
+	form = ConnexionForm(request.POST or None)
+
+    # Nous vérifions que les données envoyées sont valides
+
+    # Cette méthode renvoie False s'il n'y a pas de données 
+
+    # dans le formulaire ou qu'il contient des erreurs.
+
+	if form.is_valid(): 
+
+        # Ici nous pouvons traiter les données du formulaire
+    		form.save()
+		username = form.cleaned_data['username']
+
+		password = form.cleaned_data['password']
+
+      
+
+
+        # Nous pourrions ici envoyer l'e-mail grâce aux données 
+
+        # que nous venons de récupérer
+
+		envoi = True
+
+    
+
+    # Quoiqu'il arrive, on affiche la page du formulaire.
+
+    	return render(request, 'echec/connexion.html', lo

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'echec',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'echecs.wsgi.application'
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES = { 'default': dj_database_url.config() }
+DATABASES = { 'default': {'ENGINE': 'django.db.backends.sqlite3','NAME': 'mydatabase',} }
  
 
 

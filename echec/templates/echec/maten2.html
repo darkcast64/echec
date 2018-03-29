@@ -1,0 +1,147 @@
+{% extends "echec/index.html" %}
+{% block title %} mat en 1 {%endblock%}
+{% block nav %}
+{%endblock%}
+{%block content %}
+<head>	
+	<title>Chess</title>
+    	<link rel="stylesheet" href="/static/css/chessboard-0.3.0.min.css">
+    	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    	<script src="/static/js/chessboard-0.3.0.min.js"></script>
+	
+</head>
+<body>
+	<div id="conteneur">
+		
+	<div class="element"><ul><li><a href=" {% url 'Echiquier' %}">retour</a></li></ul></div>
+		<div class="element"><div id="board1" style="width: 400px;margin-left:450px"></div>
+		<div style="margin-left:450px"><input type="button" id="restart" value="Restart" /></div>
+		<script>
+		var i;
+		var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{ if ((source==='g6')&&(target==='f8')){
+		board1.move('h7-g8')
+		
+		i=1;}
+	else if ((source==='f5')&&(target==='h7')&&(i===1)){
+		alert('echec et mat')}
+	else { alert('mauvais coup')
+		
+			return 'snapback';}
+	};
+	var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: '4r3/2p2qpk/1b2r1Np/1p1P1Q2/8/B3P2R/1P3PP1/6K1',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board1 = ChessBoard('board1',cfg);
+  $('#restart').on('click', function() {
+  board1.position('4r3/2p2qpk/1b2r1Np/1p1P1Q2/8/B3P2R/1P3PP1/6K1');});
+</script></div>
+	<div class="element">
+		<div id="board2" style="width: 400px;margin-left:450px"></div>
+		<div style="margin-left:450px"><input type="button" id="restart1" value="Restart" /></div>
+		<script>
+		 var j;
+		 var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{ if ((source==='b4')&&(target==='b6')){
+		/*board2.position('rb1nkq2r/1ppp1bp1/1Q2p2p/p6N/B5PB/1PP2P2P/P4P2/3R1RK1');*/
+		board2.move('c7-b6'); 
+		j=1;
+		return 'trash';}
+	else if ((source==='a4')&&(target==='d7')&&(j===1)){
+		alert('echec et mat')}
+	else { alert('mauvais coup')
+		
+			return 'snapback';}
+	};
+
+
+
+	
+var cfg = 
+{
+pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+position: 'rb1nkq2/1ppp1bp1/1n2p2p/p6N/BQ4PB/1PP1P2P/P4P2/3R1RK1', 
+draggable: true,
+onDrop: onDrop,
+}; 
+		
+  var board2 = ChessBoard('board2',cfg);
+  $('#restart1').on('click', function() {
+  board2.position('rb1nkq2/1ppp1bp1/1n2p2p/p6N/BQ4PB/1PP1P2P/P4P2/3R1RK1');});
+</script></div>
+
+<div class="element" style="padding-left: 93px;">
+<div id="board3" style="width:400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart2" value="Restart"/></div>
+<script>
+		 var k;
+		 var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{ if ((source==='e5')&&(target==='f7')){
+		/*board2.position('rb1nkq2r/1ppp1bp1/1Q2p2p/p6N/B5PB/1PP2P2P/P4P2/3R1RK1');*/
+		board3.move('d8-c7'); 
+		k=1;
+		;}
+	else if ((source==='f2')&&(target==='g3')&&(k===1)){
+		alert('echec et mat')}
+	else { alert('mauvais coup')
+		
+			return 'snapback';}
+	};
+
+
+
+	
+var cfg = 
+{
+pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+position: 'r2k2r1/Np1b4/5npp/P2pN3/7P/1q1P1P2/5B2/R1K1R3', 
+draggable: true,
+onDrop: onDrop,
+}; 
+		
+  var board3 = ChessBoard('board3',cfg);
+  $('#restart2').on('click', function() {
+  board3.position('r2k2r1/Np1b4/5npp/P2pN3/7P/1q1P1P2/5B2/R1K1R3');});
+</script></div>	
+<div class="element">
+<div id="board4" style="width:400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart3" value="Restart"/></div>
+<script>
+		 var m;
+		 var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{ if ((source==='h4')&&(target==='f6')){
+		/*board2.position('rb1nkq2r/1ppp1bp1/1Q2p2p/p6N/B5PB/1PP2P2P/P4P2/3R1RK1');*/
+		board4.move('h8-g8'); 
+		m=1;
+		;}
+	else if ((source==='d5')&&(target==='e7')&&(m===1)){
+		alert('echec et mat')}
+	else { alert('mauvais coup')
+		
+			return 'snapback';}
+	};
+
+
+
+	
+var cfg = 
+{
+pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+position: '1r3r1k/2p2p1p/1b1n2p1/3N4/1PB3PB/3P3R/5PK1/R7', 
+draggable: true,
+onDrop: onDrop,
+}; 
+		
+  var board4 = ChessBoard('board4',cfg);
+  $('#restart3').on('click', function() {
+  board4.position('1r3r1k/2p2p1p/1b1n2p1/3N4/1PB3PB/3P3R/5PK1/R7');});
+  </script></div></div>	
+</body>
+	
+	{%endblock%}

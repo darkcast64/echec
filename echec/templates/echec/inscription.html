@@ -1,0 +1,10 @@
+<form method="post" action="{% url 'inscription' %}">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit"/>
+
+</form>
+

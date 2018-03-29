@@ -1,0 +1,10 @@
+ 
+{% extends "echec/proprietes-strategiques.html" %}
+{% block title %} fourchette du pion {%endblock%}
+
+{% block content %}
+{% load static %}
+<div align="center"><img src="{% static 'img/fourchette_cavalier.jpg' %}" alt="fourchette du cavalier" /></div>
+	<p>Le cavalier noir attaque à la fois le roi et la reine, le roi est obligé de se déplacer pour sortir de l'échec ce qui entraine la perte de la dame blanche</br></p>
+	<a href=" {% url 'accueil' %} ">retour</a></div>
+{% endblock %}

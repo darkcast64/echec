@@ -1,0 +1,20 @@
+
+	{% extends "echec/regles.html" %}
+{% block title %} deplacement pion {%endblock%}
+
+
+{%block content %}
+{% load static %}
+<body>
+
+<div align="center"><img src="{% static 'img/petitroque.gif' %}" alt="petit_roque" />
+<p style="padding-left: 400px;">Le roi blanc se déplace de deux cases en direction de la tour, et la tour se place immédiatement à gauche (ou à droite) du roi. Le petit roque est impossible si le roi est en échec, si il y a une pièce entre le roi et la tour ou si le roi passe par une case ou il est en échec dans le déplacement du petit roque,voir exemple ci-dessous </p>
+		
+	
+		<p></p><img src="{% static 'img/petit_roque4.jpg' %}" alt="petit_roque" /></p>
+</div>
+		
+
+		<div align="center"><p><a href=" {% url 'accueil' %} ">retour</a></p></div>
+	</body>
+{%endblock %}

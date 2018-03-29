@@ -1,0 +1,10 @@
+
+{% extends "echec/proprietes-strategiques.html" %}
+{% block title %} fourchette du pion {%endblock%}
+
+{% block content %}
+{% load static %}
+<div align="center"><img src="{% static 'img/rayon_x.jpg' %}" alt="rayon x" /></div>
+	<p>La tour attaque à la fois le fou et le cavalier car si le fou se déplace c'est le cavalier qui sera perdu et inversement</br></p>
+	<a href=" {% url 'accueil' %} ">retour</a></div>
+{% endblock %}

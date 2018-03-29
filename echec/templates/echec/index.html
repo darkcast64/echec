@@ -10,19 +10,7 @@
 		<body><p><header><h1>Les échecs</h1></header></p>
 		{% block content %}
 		<p>Bonjour à toutes et a tous,</p><p> ce site web à pour but de vous apprendre les règles du jeu d'échec</p><p> ainsi que quelques conseils pour bien débuter une partie</p>
-<div id="board1" style="width: 400px"></div>
-<link rel="stylesheet" href="/static/css/chessboard-0.3.0.css">
-<script src="http://chessboardjs.com/js/json3.min.js"></script>
-<script src="http://chessboardjs.com/js/jquery-1.10.1.min.js"></script>
-<script src="http://chessboardjs.com/js/prettify.js"></script>
-<script src="/static/js/chessboard-0.3.0.js"></script>
-<script type="text/javascript">
-var cfg = {
-  pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
-  position: 'start'
-};
-  var board1 = ChessBoard('board1', cfg);
-</script>
+
 
 
 {%endblock %}
@@ -33,6 +21,8 @@ var cfg = {
 			<li><a href=" {% url 'regles' %} ">règles de déplacement des pièces</a></li>
 			<li><a href="{% url '10commandements' %}">Les dix commandements<br>pour les ouvertures aux échecs</a></li>
 			<li><a href="{% url 'proprietes_strategiques' %}">Les propriétés stratégiques<br> des pièces</a></li>
+			<li><a href="{% url 'Echiquier' %}">Exercices</a></li>
+			<li><a href="{% url 'register' %}">Inscription</a></li>
 </div>
 		</ul>{% endblock %}</nav>
 		</body>

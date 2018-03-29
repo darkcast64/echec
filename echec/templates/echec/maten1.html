@@ -1,0 +1,203 @@
+{% extends "echec/index.html" %}
+{% block title %} mat en 1 {%endblock%}
+{% block nav %}
+{%endblock%}
+{%block content %}
+<head>	
+	<title>Chess</title>
+    	<link rel="stylesheet" href="/static/css/chessboard-0.3.0.min.css">
+    	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    	<script src="/static/js/chessboard-0.3.0.min.js"></script>
+	
+</head>
+<body>
+	<div id="conteneur">
+	<div class="element"><ul><li><a href=" {% url 'Echiquier' %}">retour</a></li></ul>
+	<div id="board1" style="width: 400px;margin-left:450px"></div>
+	<div style="margin-left:450px"><input type="button" id="restart" value="Restart" /></div>
+	<script>
+	 var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{
+  if ((source==='e5')&&(target==='c6')){
+	  alert('echec et mat')}
+	 else { alert('mauvais coup')
+			return 'snapback';}
+  
+};
+	 var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: '1r2k1qr/3p1p2/p1p3p1/4N3/2P3P1/B3QP1P/6K1/R2R4',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board1 = ChessBoard('board1',cfg);
+  $('#restart').on('click', function() {
+  board1.position('1r2k1qr/3p1p2/p1p3p1/4N3/2P3P1/B3QP1P/6K1/R2R4');});
+	</script></div>
+<div class="element"><div id="board2" style="width: 400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart2" value="Restart" /></div>
+<script>
+	var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{
+		if ((source==='f6')&&(target==='f7')){
+	  alert('echec et mat')}
+	  else { alert('mauvais coup')
+			return 'snapback';}
+		};
+	var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: '2q3kr/rp2n2b/p1p1NPpp/4N3/1Q1P4/1B4RP/5PP1/2R3K1',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board2 = ChessBoard('board2',cfg);
+  $('#restart2').on('click', function() {
+  board2.position('2q3kr/rp2n2b/p1p1NPpp/4N3/1Q1P4/1B4RP/5PP1/2R3K1');});
+</script></div>
+<div class="element"><div id="board3" style="width: 400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart3" value="Restart" /></div>
+<script>
+	var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{
+		if ((source==='c5')&&(target==='d7')){
+	  alert('echec et mat')}
+	  else { alert('mauvais coup')
+			return 'snapback';}
+		};
+	var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: 'R2r1k2/4pPn1/1b4Q1/2Nb4/4B3/1P4P1/P4K2/2R5',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board3 = ChessBoard('board3',cfg);
+  $('#restart3').on('click', function() {
+  board3.position('R2r1k2/4pPn1/1b4Q1/2Nb4/4B3/1P4P1/P4K2/2R5');});
+	</script></div>
+<div class="element"><div id="board4" style="width: 400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart4" value="Restart" /></div>
+<script>
+var onDrop=function(source, target, piece, newPos, oldPos, orientation) 
+	{
+		if ((source==='c1')&&(target==='c8')){
+	  alert('echec et mat')}
+	  else { alert('mauvais coup')
+			return 'snapback';}
+		};
+		var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: 'rn3kbr/p2n1pp1/1p1p3p/bq2pN1B/4P3/BP1P1PQP/P4NP1/2RK3R',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board4 = ChessBoard('board4',cfg);
+  $('#restart4').on('click', function() {
+  board4.position('rn3kbr/p2n1pp1/1p1p3p/bq2pN1B/4P3/BP1P1PQP/P4NP1/2RK3R');});
+		</script></div>
+<div class="element"><div id="board5" style="width: 400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart5" value="Restart" /></div>
+<script>
+	var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{
+		if ((source==='c2')&&(target==='c8')){
+	  alert('echec et mat')}
+	  else { alert('mauvais coup')
+			return 'snapback';}
+		};
+	var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: '6k1/1r2Rpp1/7p/8/8/8/2R2PPP/rB4K1',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board5 = ChessBoard('board5',cfg);
+  $('#restart5').on('click', function() {
+  board5.position('6k1/1r2Rpp1/7p/8/8/8/2R2PPP/rB4K1');});
+	</script></div>
+<div class="element"><div id="board6" style="width: 400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart6" value="Restart" /></div>
+<script>
+	var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{
+		if ((source==='c4')&&(target==='f7')){
+	  alert('echec et mat')}
+	  else { alert('mauvais coup')
+			return 'snapback';}
+		};
+	var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: '8/8/8/5k2/2Q2P2/5P2/3K4/8',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board6 = ChessBoard('board6',cfg);
+  $('#restart6').on('click', function() {
+  board6.position('8/8/8/5k2/2Q2P2/5P2/3K4/8');});
+	</script></div>
+<div class="element"><div id="board7" style="width: 400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart7" value="Restart" /></div>
+<script>
+	var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{
+		if ((source==='f2')&&(target==='f4')){
+	  alert('echec et mat')}
+	  else { alert('mauvais coup')
+			return 'snapback';}
+		};
+	var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: '8/8/5r1R/1n2K1k1/7p/8/4BP2/8',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board7 = ChessBoard('board7',cfg);
+  $('#restart7').on('click', function() {
+  board7.position('8/8/5r1R/1n2K1k1/7p/8/4BP2/8');});
+</script></div>
+<div class="element"><div id="board8" style="width: 400px;margin-left:450px"></div>
+<div style="margin-left:450px"><input type="button" id="restart8" value="Restart" /></div>
+<script>
+	var onDrop = function(source, target, piece, newPos, oldPos, orientation) 
+	{
+		if ((source==='e5')&&(target==='g6')){
+	  alert('echec et mat')}
+	  else { alert('mauvais coup')
+			return 'snapback';}
+		};
+	var cfg = 
+	 {
+ pieceTheme: '/static/img/chesspieces/wikipedia/{piece}.png',
+ position: '2r4k/1r4pp/8/4N3/2B5/1P5R/1K6/8',
+draggable: true, 
+onDrop: onDrop,
+ 
+			}; 
+		
+  var board8 = ChessBoard('board8',cfg);
+  $('#restart8').on('click', function() {
+  board8.position('2r4k/1r4pp/8/4N3/2B5/1P5R/1K6/8');});
+</script></div></div>		
+</body>
+	
+	{%endblock%}

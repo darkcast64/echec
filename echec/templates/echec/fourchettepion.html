@@ -1,0 +1,10 @@
+
+{% extends "echec/proprietes-strategiques.html" %}
+{% block title %} fourchette du pion {%endblock%}
+
+{% block content %}
+{% load static %}
+<div align="center"><img src="{% static 'img/fourchette-pion.jpg' %}" alt="fourchette du pion" /></div>
+	<p>Dans ce cas de figure le pion attaque 2 pièces à la fois,<br> les noirs ne peuvent sauver qu'un cavalier et perdre l'autre</br></p>
+	<a href=" {% url 'accueil' %} ">retour</a></div>
+{% endblock %}

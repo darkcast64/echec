@@ -1,9 +1,12 @@
 {% extends "echec/index.html" %}
 {% block title %} Propriétés stratégiques {%endblock%}
 {% block content %}<p> il y a quelques propriétés qu'il faut connaître pour gagner des parties </p>{%endblock %}
+<nav>
 {% block nav %}
-<ul><li><a href="fourchette pion.html"> fourchette du pion</a></li>
-					<li><a href="fourchette cavalier.html">la fourchette du cavalier</a></li>
-					<li><a href="rayon x.html">l'attaque aux rayons x</a></li>
-					<li><a href="clouage.html">le clouage</a></li></ul>
+<div class="nav">
+<ul><li><a href="{% url 'fourchettepion' %}"> fourchette du pion</a></li>
+					<li><a href="{% url 'fourchette_cavalier' %}">la fourchette du cavalier</a></li>
+					<li><a href="{% url 'rayon_x' %}">l'attaque aux rayons x</a></li>
+					<li><a href="{% url 'clouage' %}">le clouage</a></li></ul></div>
 {% endblock %}
+</nav>

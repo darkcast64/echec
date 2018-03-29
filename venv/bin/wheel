@@ -1,4 +1,4 @@
-#!/home/parrot/projet_django/echecs/venv/bin/python
+#!/home/parrot/projet_django/echecs/venv/bin/python3
 
 # -*- coding: utf-8 -*-
 import re

@@ -1,0 +1,14 @@
+{% extends "echec/index.html" %}
+{% block title %} inscription {%endblock%}
+
+
+{% block content %}
+
+class InscriptionForm(forms.ModelForm):
+    class Meta:
+        model = Inscription
+        fields = '__all__'
+
+{%endblock%}
+
+

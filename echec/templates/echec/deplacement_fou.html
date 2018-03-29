@@ -1,24 +1,12 @@
-{% extends "echec/index.html" %}
+{% extends "echec/regles.html" %}
 {% block title %} deplacement fou {%endblock%}
 
-{%block nav %}
 
-<div class="nav"><p><ul>
-			<li><a href=" {% url 'deplacement_pion' %} ">le pion</a></li>
-			<li><a href=" {% url 'deplacement_cavalier' %} ">le cavalier</a></li>
-			<li><a href=" {% url 'deplacement_fou' %}">le fou</a></li>
-			<li><a href=" {% url 'deplacement_tour' %}">la tour</a></li>
-			<li><a href=" {% url 'deplacement_dame' %}">la dame</a></li>
-			<li><a href="déplacement roi.html">le roi</a></li>
-			<li><a href="petitroque.html"> le petit roque</a></li>
-			<li><a href="grandroque.html"> le grand roque</a></li>
-		</ul></p></div>
-<a href=" {% url 'accueil' %} ">retour</a>
-{%endblock %}
 {%block content %}
 {% load static %}
+
 <p><div align="center" ><img src="{% static 'img/fou.gif' %}" alt="déplacement fou" /></div></p>
-		<p>le fou se déplace en diagonal sur sa couleur</p>
+		<p>le fou se déplace en diagonal sur sa couleur</p></div>
 		
 	
 {%endblock %}

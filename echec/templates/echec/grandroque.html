@@ -1,0 +1,16 @@
+{% extends "echec/regles.html" %}
+{% block title %} deplacement pion {%endblock%}
+
+
+{%block content %}
+{% load static %}
+<body>
+
+<div align="center"><img src="{% static 'img/grandroque.gif' %}" alt="grand_roque" />
+<p style="padding-left: 400px;">il ne doit pas y avoir de pièces en le roi et la tour pour faire le grand roque et même règle que pour le petit roque : il est impossible si le roi passe par une case ou il est en échec</p>
+</div>
+		
+
+		<div align="center"><p><a href=" {% url 'accueil' %} ">retour</a></p></div>
+	</body>
+{%endblock %}

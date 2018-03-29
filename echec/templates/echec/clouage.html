@@ -1,0 +1,10 @@
+
+{% extends "echec/proprietes-strategiques.html" %}
+{% block title %} fourchette du pion {%endblock%}
+
+{% block content %}
+{% load static %}
+<div align="center"><img src="{% static 'img/clouage.jpg' %}" alt="clouage" /></div>
+	<p>Ici, la tour est "clouée" c'est à dire qu'elle ne peut pas bouger car sinon le roi serait mis en échec</br></p>
+	<a href=" {% url 'accueil' %} ">retour</a></div>
+{% endblock %}
